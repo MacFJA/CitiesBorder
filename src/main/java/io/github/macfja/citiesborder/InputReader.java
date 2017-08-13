@@ -1,6 +1,7 @@
 package io.github.macfja.citiesborder;
 
 import java.io.BufferedReader;
+import java.io.Closeable;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -14,7 +15,7 @@ import java.util.zip.GZIPInputStream;
  *
  * @author MacFJA
  */
-public class InputReader {
+public class InputReader implements Closeable {
     /**
      * The final reader.
      * It encapsulate a GZIP reader that encapsulate a FileStream
@@ -92,6 +93,11 @@ public class InputReader {
             reader.read(buffer);
             return new String(buffer);
         }
+    }
+
+    @Override
+    public void close() throws IOException {
+        reader.close();
     }
 
     /**

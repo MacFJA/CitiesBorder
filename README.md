@@ -31,7 +31,7 @@ Add the dependency in your Maven project:
         <dependency>
             <groupId>io.github.macfja</groupId>
             <artifactId>cities-border</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
         <!-- ... -->
     </dependencies>
@@ -184,7 +184,6 @@ The number after the name of the city is the number of char for all GPS position
 50.1733293 3.5605369
 50.1711761 3.558626
 ```
-(See them in Nominatim: [Lannoy](http://nominatim.openstreetmap.org/details.php?place_id=171402909), [Beaurain](http://nominatim.openstreetmap.org/details.php?place_id=171401473))
 
 Limitation
 ----------

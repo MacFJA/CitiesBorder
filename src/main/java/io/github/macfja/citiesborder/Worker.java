@@ -94,9 +94,12 @@ public final class Worker {
         String readName;
         while ((readName = reader.readEntry()) != null) {
             if (readName.equals(name)) {
-                return reader.readData().split("\n");
+                String[] result = reader.readData().split("\n");
+                reader.close();
+                return result;
             }
         }
+        reader.close();
         return new String[0];
     }
 
